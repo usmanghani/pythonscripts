@@ -55,13 +55,15 @@ class Project(StoreObjectBase):
 	pass
 	
 
-# connection = pymongo.Connection('flame.mongohq.com', 27044)
-# userId = 'usman.ghani'
-# pwd = 'Mugga25.'
-connection = pymongo.Connection('localhost', 27017)
+connection = pymongo.Connection('flame.mongohq.com', 27044)
+# connection = pymongo.Connection('localhost', 27017)
 db = connection['ughani-mongo']
-# if not db.authenticate(userId, pwd):
-# 	raise 'Authentication Failure'
+
+userId = 'usman.ghani'
+pwd = 'Mugga25.'
+
+if not db.authenticate(userId, pwd):
+	raise 'Authentication Failure'
 
 myusers = Users(connection, db)
 mytasks = Tasks(connection, db)

@@ -8,13 +8,13 @@ from scrapy.item import Item, Field
 class DliMetaItem(Item):
     # define the fields for your item here like:
     # name = Field()
-    title = Field()
-    author = Field()
+	title = Field()
+	author = Field()
 	subject = Field()
 	language = Field()
 	barcode = Field()
 	year = Field()
-    metadataLink = Field()
-    pages = Field()
+	metadataLink = Field()
+	pages = Field()
 	readerLinks = Field()
-    pass
+	

@@ -14,3 +14,9 @@ NEWSPIDER_MODULE = 'dli.spiders'
 DEFAULT_ITEM_CLASS = 'dli.items.DliItem'
 USER_AGENT = '%s/%s' % (BOT_NAME, BOT_VERSION)
 
+LOG_ENABLED = True
+
+ROOT_STORAGE_DIR = '/users/usmanghani/Downloads/dli/'
+
+FEED_URI = "/tmp/%(name)s/%(time)s/scraped_data.json"
+FEED_FORMAT = 'jsonlines'
